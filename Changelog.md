@@ -6,6 +6,10 @@
 
 **Changed Files:**
 
+        modified:   Changelog.md
+        modified:   src/client/Css/index.css
+        modified:   src/client/HTML/index.html
+
 ---
 
 # [0.0.1] - 08/03/2020
