@@ -1,6 +1,13 @@
 
 ---
 
+# [0.0.2] - 08/03/2020
+## Index.html and Index CSS Improves
+
+**Changed Files:**
+
+---
+
 # [0.0.1] - 08/03/2020
 ## First commit and project creation
 1. Add images folder
