@@ -1,71 +1,73 @@
-:root{ /*Refere-se ao elemento principal do html*/
-    /*O -- define uma variavel no css */
-    --color-background: #f0f0f7;
-    --color-primary-lighter: #9871F5;
-    --color-primary-light: #916BEA;
-    --color-primary: #8257e5;
-    --color-primary-dark: #774dd6;
-    --color-secondary: #04D361;    
-    --color-secondary-dark: #04BF58;
-    --color-title-in-primary: #FFFFFF;    
-    --color-text-in-primary: #D4C2FF;
-    --color-text-title: #32264D;
-    --color-text-complement: #9C98A6;
-    --color-text-base: #6A6180;
-    --color-line-in-white: #E6E6F0;
-    --color-input-background: #F8F8FC;
-    --color-button-text: #FFFFFF;
-    --color-box-base:#FFFFFF;
-    --color-box-footer:#FAFAFC;
-    --color-small-info:#C1BCCC;
+:root {
+  /*Refere-se ao elemento principal do html*/
+  /*O -- define uma variavel no css */
+  --color-background: #f0f0f7;
+  --color-primary-lighter: #9871f5;
+  --color-primary-light: #916bea;
+  --color-primary: #8257e5;
+  --color-primary-dark: #774dd6;
+  --color-secondary: #04d361;
+  --color-secondary-dark: #04bf58;
+  --color-title-in-primary: #ffffff;
+  --color-text-in-primary: #d4c2ff;
+  --color-text-title: #32264d;
+  --color-text-complement: #9c98a6;
+  --color-text-base: #6a6180;
+  --color-line-in-white: #e6e6f0;
+  --color-input-background: #f8f8fc;
+  --color-button-text: #ffffff;
+  --color-box-base: #ffffff;
+  --color-box-footer: #fafafc;
+  --color-small-info: #c1bccc;
 
-    /*Tamanho da fonte padrao: 16px - 100% - 1rem*/
-    font-size:60%;  /*Controle das medidas rem - Relativo ao root Root element*/   
+  /*Tamanho da fonte padrao: 16px - 100% - 1rem*/
+  font-size: 60%; /*Controle das medidas rem - Relativo ao root Root element*/
 
-    /*Pixel é uma unidade menos responsiva e pouco adaptativa*/
-
+  /*Pixel é uma unidade menos responsiva e pouco adaptativa*/
 }
 
-*{
-    /*Muitos elementos*/
-    /* Usado para limpar os padroes do browser */
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+* {
+  /*Muitos elementos*/
+  /* Usado para limpar os padroes do browser */
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-html, body{
-    height: 100vh;
+html,
+body {
+  height: 100vh;
 }
 
-
-#container{
-    /*box model*/
-    width: 90vw;
-    max-width: 700px;
-    /*border: 1px solid red;*/
-    /*padding: 10px 40px 60px 2px; Cima, direita,baixo,esquerda*/
-    /*margin: 40px 10px;Cima e Baixo, lados*/
-
+#container {
+  /*box model*/
+  width: 90vw;
+  max-width: 700px;
+  /*border: 1px solid red;*/
+  /*padding: 10px 40px 60px 2px; Cima, direita,baixo,esquerda*/
+  /*margin: 40px 10px;Cima e Baixo, lados*/
 }
 
-#page-landing{
-    background-color: var(--color-background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+#page-landing {
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body,
 input,
 button,
-textarea{
-    font: 500 1.6rem Poppins;
-    color:var(--color-text-base);
+textarea {
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
 }
 
-
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%; /*todo 1rem sera relativo a 10px*/
+  }
+}
 /*
 
 Ordem de força css:

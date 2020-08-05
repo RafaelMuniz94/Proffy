@@ -1,3 +1,16 @@
+# [0.0.4] - 08/04/2020
+## index.html mobile layout finished
+## index.css add media query
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/main.css
+        modified:   src/client/Css/partials/page-landing.css
+        modified:   src/client/HTML/index.html
+
+---
+
 # [0.0.3] - 08/04/2020
 ## Index.html and Index CSS Improves
 ## CSS typo correction
