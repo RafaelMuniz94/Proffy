@@ -1,3 +1,16 @@
+# [0.0.5] - 08/04/2020
+## Creation of study page (html and CSS)
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/main.css
+        new file:   src/client/Css/partials/page-study.css
+        modified:   src/client/HTML/index.html
+        new file:   src/client/HTML/study.html
+
+---
+
 # [0.0.4] - 08/04/2020
 ## index.html mobile layout finished
 ## index.css add media query
