@@ -1,3 +1,15 @@
+# [0.0.3] - 08/04/2020
+## Index.html and Index CSS Improves
+## CSS typo correction
+## index html structure updated
+## CSS improves for landing-page
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        renamed:    src/client/Css/index.css -> src/client/Css/main.css
+        new file:   src/client/Css/partials/page-landing.css
+        modified:   src/client/HTML/index.html
 
 ---
 
