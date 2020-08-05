@@ -1,3 +1,14 @@
+# [0.0.6] - 08/05/2020
+## Study page Mobile first download complete
+## Study page desktop download complete
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/partials/page-study.css
+        modified:   src/client/HTML/study.html
+---
+
 # [0.0.5] - 08/04/2020
 ## Creation of study page (html and CSS)
 
