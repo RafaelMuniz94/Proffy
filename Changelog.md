@@ -1,3 +1,15 @@
+# [0.0.8] - 08/05/2020
+## Give classes page Mobile first download complete
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/partials/forms.css
+        modified:   src/client/Css/partials/page-give-classes.css
+        modified:   src/client/HTML/give-classes.html
+        
+---
+
 # [0.0.7] - 08/05/2020
 ## Header css Refactor
 ## Forms css Refactor
