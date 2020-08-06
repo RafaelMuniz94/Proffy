@@ -1,5 +1,17 @@
+# [0.0.9] - 08/05/2020
+## Changelog typo
+## Give classes page desktop layout complete
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/partials/page-give-classes.css
+        modified:   src/client/HTML/give-classes.html
+
+---
+
 # [0.0.8] - 08/05/2020
-## Give classes page Mobile first download complete
+## Give classes page Mobile first layout complete
 
 **Changed Files:**
 
@@ -30,8 +42,8 @@
 ---
 
 # [0.0.6] - 08/05/2020
-## Study page Mobile first download complete
-## Study page desktop download complete
+## Study page Mobile first layout complete
+## Study page desktop layout complete
 
 **Changed Files:**
 
