@@ -48,7 +48,14 @@ body {
   /*margin: 40px 10px;Cima e Baixo, lados*/
 }
 
-#page-landing {
+body{
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #page-landing {
   background-color: var(--color-background);
   display: flex;
   align-items: center;
@@ -60,7 +67,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
 
 body,
 input,
@@ -68,6 +75,10 @@ button,
 textarea {
   font: 500 1.6rem Poppins;
   color: var(--color-text-base);
+}
+
+input {
+    -webkit-appearance: none; /*Remove o estilo de botoes do IOS*/
 }
 
 @media (min-width: 700px) {

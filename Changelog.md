@@ -1,3 +1,22 @@
+# [0.0.7] - 08/05/2020
+## Header css Refactor
+## Forms css Refactor
+## Creation of give classes page (html and CSS)
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/main.css
+        new file:   src/client/Css/partials/forms.css
+        new file:   src/client/Css/partials/header.css
+        new file:   src/client/Css/partials/page-give-classes.css
+        modified:   src/client/Css/partials/page-study.css
+        new file:   src/client/HTML/give-classes.html
+        modified:   src/client/HTML/index.html
+        modified:   src/client/HTML/study.html
+
+---
+
 # [0.0.6] - 08/05/2020
 ## Study page Mobile first download complete
 ## Study page desktop download complete
@@ -7,6 +26,7 @@
         modified:   Changelog.md
         modified:   src/client/Css/partials/page-study.css
         modified:   src/client/HTML/study.html
+
 ---
 
 # [0.0.5] - 08/04/2020
