@@ -1,3 +1,15 @@
+# [0.0.10] - 08/06/2020
+## Give Classes page Javascript introduction
+
+**Changed Files:**
+
+        modified:   Changelog.md
+        modified:   src/client/Css/partials/page-give-classes.css
+        modified:   src/client/HTML/give-classes.html
+        new file:   src/client/JS/give-classes.js
+
+---
+
 # [0.0.9] - 08/05/2020
 ## Changelog typo
 ## Give classes page desktop layout complete
