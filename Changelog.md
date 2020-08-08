@@ -1,3 +1,20 @@
+# [0.0.13] - 08/08/2020
+## Creation of DB classes and DB test
+
+**Changed Files:**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        new file:   src/server/database/ClassScheduleDB.js
+        new file:   src/server/database/ClassesDB.js
+        new file:   src/server/database/ProffyDB.js
+        new file:   src/server/database/db.js
+        new file:   src/server/database/test.js
+        modified:   src/server/package-lock.json
+        modified:   src/server/package.json
+
+---
+
 # [0.0.12] - 08/07/2020
 ## Inplementation of Template Engine functionalities in Study and Give-Classes pages
 
