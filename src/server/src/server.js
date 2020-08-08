@@ -2,34 +2,52 @@ const express = require("express");
 const server = express();
 const path = require("path");
 const nunjucks = require("nunjucks");
-const proffys = require("./model/proffys")
+const proffys = require("./model/proffys");
+const subjects = require("./model/subjects");
+const week = require("./model/week");
 
+function getSubject(subjectNumber) {
+  return subjects[subjectNumber - 1];
+}
 
 function pageLanmding(req, resp) {
-    return resp.sendFile(path.join(__dirname, "../../client/HTML/index.html"));
+  return resp.render("index.html");
+}
+
+function pageStudy(req, resp) {
+  let filter = req.query;
+  return resp.render("study.html", {
+    proffys,
+    filter,
+    subjects,
+    week,
+    tittle: "Hi From Nunjucks",
+  });
+}
+
+function pageGiveClasses(req, resp) {
+  let data = req.query;
+
+  if (Object.keys(data).length > 0) {
+    data.subject = getSubject(data.subject);
+    proffys.push(data);
+    return resp.redirect("/study");
   }
 
-  function pageStudy (req, resp) {
-    return resp.sendFile(path.join(__dirname, "../../client/HTML/study.html"));
-  }
+  return resp.render("give-classes.html", { subjects, week });
+}
 
-  function pageGiveClasses(req, resp)  {
-    //return resp.send(__dirname+"../../client/HTML/study.html")
-    return resp.sendFile(
-      path.join(__dirname, "../../client/HTML/give-classes.html")
-    );
-  }
-
-  // configurar nunjucks (Template engine)
-  nunjucks.configure(path.join(__dirname, "../../client/HTML",{
-
-  }))
+// configurar nunjucks (Template engine)
+nunjucks.configure(path.join(__dirname, "../../client/HTML"), {
+  express: server,
+  noCache: true,
+});
 
 server
-// Configurar arquivos estaticos (css, scripts, imagens)
+  // Configurar arquivos estaticos (css, scripts, imagens)
   .use(express.static(path.join(__dirname, "../../client")))
   //rotas da aplicacao
   .get("/", pageLanmding)
-  .get("/study",pageStudy)
+  .get("/study", pageStudy)
   .get("/give-classes", pageGiveClasses)
-  .listen(5500);
+  .listen(5500); // start

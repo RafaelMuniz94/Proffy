@@ -1,3 +1,20 @@
+# [0.0.12] - 08/07/2020
+## Inplementation of Template Engine functionalities in Study and Give-Classes pages
+
+**Changed Files:**
+
+        modified:   src/client/Css/main.css
+        modified:   src/client/Css/partials/forms.css
+        modified:   src/client/Css/partials/page-study.css
+        modified:   src/client/HTML/give-classes.html
+        modified:   src/client/HTML/study.html
+        modified:   src/server/src/model/proffys.js
+        new file:   src/server/src/model/subjects.js
+        new file:   src/server/src/model/week.js
+        modified:   src/server/src/server.js
+
+---
+
 # [0.0.11] - 08/07/2020
 ## Node Server Creation 
 ## Add gitignore 
