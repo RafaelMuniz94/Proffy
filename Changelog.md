@@ -1,3 +1,37 @@
+# [0.0.11] - 08/07/2020
+## Node Server Creation 
+## Add gitignore 
+## Change folder structure
+## Add Server routes
+## Configure Template Engine (nunjucks)
+
+**Changed Files:**
+
+        new file:   .gitignore
+        modified:   Changelog.md
+        modified:   src/client/HTML/give-classes.html
+        modified:   src/client/HTML/index.html
+        modified:   src/client/HTML/study.html
+        renamed:    images/favicon.png -> src/client/images/favicon.png
+        renamed:    images/icons/back.svg -> src/client/images/icons/back.svg
+        renamed:    images/icons/give-classes.svg -> src/client/images/icons/give-classes.svg
+        renamed:    images/icons/purple-heart.svg -> src/client/images/icons/purple-heart.svg
+        renamed:    images/icons/rocket.svg -> src/client/images/icons/rocket.svg
+        renamed:    images/icons/smile.svg -> src/client/images/icons/smile.svg
+        renamed:    images/icons/study.svg -> src/client/images/icons/study.svg
+        renamed:    images/icons/success-check-icon.svg -> src/client/images/icons/success-check-icon.svg
+        renamed:    images/icons/warning.svg -> src/client/images/icons/warning.svg
+        renamed:    images/icons/whatsapp.svg -> src/client/images/icons/whatsapp.svg
+        renamed:    images/landing.svg -> src/client/images/landing.svg
+        renamed:    images/logo.svg -> src/client/images/logo.svg
+        renamed:    images/success-background.svg -> src/client/images/success-background.svg
+        new file:   src/server/package-lock.json
+        new file:   src/server/package.json
+        new file:   src/server/src/model/proffys.js
+        new file:   src/server/src/server.js
+
+---
+
 # [0.0.10] - 08/06/2020
 ## Give Classes page Javascript introduction
 
