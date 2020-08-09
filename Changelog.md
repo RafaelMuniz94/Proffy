@@ -1,3 +1,24 @@
+# [0.1.0] - 08/09/2020
+## Site Finished
+## Give-Classes now uses post instead get method
+## Data saved and received from sqlite
+
+**Changed Files:**
+
+        modified:   .gitignore
+        modified:   src/client/Css/partials/page-study.css
+        modified:   src/client/HTML/give-classes.html
+        modified:   src/client/HTML/study.html
+        modified:   src/server/database/ProffyDB.js
+        modified:   src/server/src/model/proffys.js
+        modified:   src/server/src/model/subjects.js
+        new file:   src/server/src/pages.js
+        modified:   src/server/src/server.js
+        new file:   src/server/src/utils.js
+
+
+---
+
 # [0.0.13] - 08/08/2020
 ## Creation of DB classes and DB test
 

@@ -40,13 +40,19 @@ module.exports.selectByID = async function(db,proffy_ID){
     classes on(proffys.id = classes.proffy_id) WHERE classes.proffy_id = ${proffy_ID};`);
 }
 
-module.exports.selectProffyByClassAndSchedule = async function(db,{class_ID,time}){
+module.exports.selectProffyByClassAndSchedule = async function(db,{class_ID,time,weekday}){
+  try {
     return await db.all(`SELECT proffys.*,classes.*,class_schedule.* FROM proffys
     JOIN
     classes on(proffys.id = classes.proffy_id) 
     JOIN
     class_schedule on(classes.id = class_schedule.class_id)
-    WHERE classes.proffy_id = ${class_ID}
+    WHERE classes.subject = ${class_ID}
     and
-    class_schedule.time_from >= ${time} and class_schedule.time_to < ${time};`);
+    class_schedule.time_from <= ${time} and class_schedule.time_to > ${time}
+    and 
+    class_schedule.weekday = ${weekday};`);
+  } catch (error) {
+    console.log(error)
+  }
 }

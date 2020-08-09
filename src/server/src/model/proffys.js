@@ -1,29 +1,57 @@
-const proffys = [
-  {
-    name: "Rafael",
-    avatar: "https://avatars0.githubusercontent.com/u/26208069?v=4",
-    whatsapp: "8996451213218",
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    //subject: "Como fazer nada com louvor",
-    subject: 9,
-    cost: 40,
-    weekday: [0,2,4],
-    time_from: [3600],
-    time_to: [7800],
-  },
-  {
-    name: "Mayk Brito",
-    avatar: "https://avatars3.githubusercontent.com/u/6643122?v=4",
-    whatsapp: "8996451213218",
-    bio:
-      "Pharetra et ultrices neque ornare aenean euismod elementum nisi. Convallis tellus id interdum velit laoreet id donec ultrices. Mauris a diam maecenas sed enim ut. Quis hendrerit dolor magna eget est lorem ipsum. Lacus vestibulum sed arcu non odio euismod. Varius vel pharetra vel turpis nunc. Vitae ultricies leo integer malesuada nunc vel. Id faucibus nisl tincidunt eget nullam. Quis auctor elit sed vulputate. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada.",
-    subject: 1,
-    cost: 140,
-    weekday: [1,3,5],
-    time_from: [3600],
-    time_to: [7800],
-  },
-];
+const proffDb = require("../../database/ProffyDB");
+const Database = require("../../database/db");
+const {convertHoursToMinutes} = require('../utils')
 
-module.exports = proffys;
+module.exports.proffys = Database.then(async (db) => {
+  return await proffDb.selectAll(db);
+});
+
+module.exports.add = async (data) => {
+  console.log(data)
+  proffy = {
+    name: data.name,
+    avatar: data.avatar,
+    whatsapp: data.whatsapp,
+    bio: data.bio,
+  };
+  classValue = {
+    subject: data.subject,
+    cost: data.cost
+  };
+
+  classSchedule = [];
+  for(let i = 0; i < data.weekday.length; i++){
+      classSchedule.push( {
+        weekday: data.weekday,
+        time_from: convertHoursToMinutes(data.time_from+''),
+        time_to: convertHoursToMinutes(data.time_to+'')
+      })
+  }
+
+  await Database.then(async (db) => {
+    proffDb.create(db, { proffy, classValue, classSchedule });
+  });
+};
+
+
+module.exports.addBody = async({  proffy, classValue, classSchedule }) =>{
+  await Database.then(async (db) => {
+    proffDb.create(db, { proffy, classValue, classSchedule });
+  });
+}
+
+module.exports.returnProffyByClassAndSchedule = async ({
+  class_ID,
+  time,
+  weekday,
+}) => {
+  let proffys = await Database.then(async (db) => {
+    return proffDb.selectProffyByClassAndSchedule(db, {
+      class_ID,
+      time,
+      weekday,
+    });
+  });
+
+  return proffys
+};

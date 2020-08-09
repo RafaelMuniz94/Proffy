@@ -40,7 +40,8 @@
                   >Selecione uma opção</option
                 >
                 {%for subject in subjects%}
-                <option value="{{loop.index}}" {{"selected" if filter.subject == subject.id}}>{{subject.name}}</option>
+                <!-- <option value="{{loop.index0}}" {{"selected" if filter.subject == subject.id}}>{{subject.name}}</option> -->
+                <option value="{{subject.id}}" {{"selected" if filter.subject == subject.id}}>{{subject.name}}</option>
                 {%endfor%}
 
               </select>
@@ -71,6 +72,13 @@
 
         <!-- <h1>{{tittle}}</h1> -->
 
+
+        {%if proffys == ""%}
+
+        <p class="no-results">Nenhum professor encontrado com sua pesquisa</p>
+
+
+        {%else%}
         {%for proffy in proffys %}
 
         <article class="teacher-item">
@@ -98,6 +106,7 @@
         </article>
 
         {%endfor%}
+        {%endif%}
 
       </main>
     </div>
